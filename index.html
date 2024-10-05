@@ -11,23 +11,24 @@
 </head>
 
 <body>
-    <nav>
-        <div class="navcontent">
-            <div class="logo"><a href="#">Navya</a></div>
-        <label for="check" class="checkbox">
-            <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-        </div>
-        
-    </nav>
+    <header>
+        <nav>
+            <div class="navcontent">
+                <label for="check" class="checkbox">
+                    <img src="assets/menu.svg" alt="">
+                </label>
+                <input type="checkbox" name="check" id="check" />
+                <ul>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+            </div>
+
+        </nav>
+    </header>
     <section>
         <div class="hero">
             <div class="hero_content">
@@ -36,9 +37,10 @@
                 </div>
                 <div class="content">
                     <h1>Hey, I'm Navya </h1><br>
-                    <p>Welcome to my Portfolio! I'm a B.tech sophomore with a keen interest in web development and competetive
+                    <p>Welcome to my Portfolio! I'm a B.tech sophomore with a keen interest in web development and
+                        competetive
                         coding.</p>
-                    <div class="hero_btn" id="Contact">
+                    <div class="hero_btn" >
                         <a href="mailto:navyagupta171@gmail.com">
                             <button>Contact Me</button>
                         </a>
@@ -49,34 +51,52 @@
 
         </div>
     </section>
-    <section id="Skills">
+    <section id="skills">
+        <h1>My Skillset</h1>
         <div class="skillset">
-            <h1>My Skillset</h1>
+
+            <br>
             <div class="skill_card">
-                <img src="assets/htmllogo.svg" alt=""><h4>HTML</h4>
+                <span><img src="assets/htmllogo.svg" alt=""><span>HTML</span></span>
                 <p>Proficient in Building Semantic HTML pages</p>
             </div>
             <div class="skill_card">
-                <img src="assets/css.svg" alt=""><h4>CSS</h4>
+                <span><img src="assets/css.svg" alt=""><span>CSS</span></span>
                 <p>Creating Responsive Designs</p>
             </div>
             <div class="skill_card">
-                <img src="assets/code.svg" alt=""><h4>Code</h4>
+                <span><img src="assets/code2.svg" alt=""><span>CODE</span></span>
                 <p>Coding in Java and C++</p>
             </div>
         </div>
+
+    </section>
+    <section class="about" id="about">
+        <h1>About Me</h1>
+        <p>Hello! I’m Navya Gupta, a 2nd-year B.Tech student currently pursuing Computer Science Engineering at Ajay
+            Kumar Garg Engineering College (AKGEC), Ghaziabad. I’m passionate about coding and have been exploring web
+            development, having learned HTML and CSS. I'm also active on CodeChef. I'm constantly looking to improve my
+            skills and take on new challenges in the tech world. </p>
         <div class="profiles">
             <p>Checkout my :</p>
             <ul>
                 <li><a href="https://github.com/Navvyaa" target="_blank"><img src="assets/github.svg" alt=""></a></li>
+                <li>
+                    <a href="https://www.codechef.com/users/navyagupta3" target="_blank"><img src="assets/code.svg"
+                            alt=""></a>
+                </li>
             </ul>
-            <li>
-                <a href="https://www.codechef.com/users/navyagupta3" target="_blank"><img src="assets/code.svg" alt=""></a>
-            </li>
+
+        </div>
+
 
         </div>
     </section>
-    
+    <footer .class="contact" id="#contact">
+        <h3>I’m just a message away! Feel free to reach out whenever you’d like.</h3>
+        <p>Phone : +91 785655347</p>
+        <p>Email : navyagupta171@gmail.com</p>
+    </footer>
 </body>
 
 </html>

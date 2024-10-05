@@ -6,10 +6,10 @@
     box-sizing: border-box;
 }
 :root{
-    --primary-color:#1c03a7;
+    --primary-color: #b5b2c5;
     --secondary-color:#6851e6;
     --text-color-dark: #27161E;
-    --text-color-light: #e9dbe1;
+    --text-color-light: #ffffff;
 }
 body{
     font-family: "Poppins", sans-serif;
@@ -18,15 +18,10 @@ body{
 a{
     text-decoration: none;
 }
-nav .logo a {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    transition: 0.3s;
-  }
+
   nav {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 99;
@@ -36,7 +31,7 @@ nav .logo a {
     padding: 20px;
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   ul li a:hover {
     border-top-color: var(--secondary-color);
@@ -50,7 +45,7 @@ nav ul {
     /* padding: 5px; */
     gap: 2rem;
     list-style-type: none;
-    min-height: 50px;
+    min-height: 30px;
     /* position: fixed; */   
 }
 nav ul li{
@@ -90,6 +85,7 @@ nav .checkbox i {
     background-color: #b5b2c5;
     align-items: center;
     text-align: center;
+    width: 100vw
 }
 .hero_content{
     display: flex;
@@ -97,7 +93,7 @@ nav .checkbox i {
     align-content: center;
 }
 .content{
-    width: 50%;
+    width: 60%;
     /* background-color: #27161E; */
     margin: 23px;
     position: relative;
@@ -130,7 +126,7 @@ nav .checkbox i {
     color:var(--text-color-light);
 }
 .hero_btn button:hover{
-    background-color: var(--primary-color);
+    background-color:#27161E;
     color: var(--text-color-light);
     
 }
@@ -144,11 +140,12 @@ nav .checkbox i {
         }
         
         .navcontent .checkbox i {
-            color: var(--text-color-dark); /* Adjust the color for visibility */
-            font-size: 2rem;
-            display: block; /* Ensure the icon is visible */
+            color: var(--text-color-dark); 
+            display: block; 
             cursor: pointer;
+            
         }
+
     
     ul {
         position: absolute;
@@ -163,6 +160,7 @@ nav .checkbox i {
     }
     nav #check:checked ~ ul {
         left:0;
+        
     }
     ul li a {
         font-size: 1.2rem;
@@ -183,9 +181,73 @@ nav .checkbox i {
         justify-items: center;
     }
     .hero-img {
-        max-width: 80%; /* Make the image larger on mobile */
-        margin-top: 0px; /* Space above the image */
+        max-width: 80%; 
+        margin-top: 10px; 
     }
+    .skillset{
+        display: flex;
+        flex-direction: column;
+    }
+}
+#skills{
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 18px;
+}
+.skillset{
+    box-sizing: content-box;
+    
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 1;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #b5b2c5;
+}
+
+.skill_card{
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    flex: 1;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    height: 100px;
+}
+.skill_card span span{
+    display: inline-block;
+    text-align: center;
+
+}
+.skill_card span img{
+    width: 25px;
+    align-items: center;
+}
+#about {
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 18px;
+}
+.about p {
+    padding: 25px;
+    width: 70%;
+    margin: auto;
+}
+.about .profiles ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+footer #contact{
+    margin: 50px 0px;
+    text-align: center;
 }
 
 
