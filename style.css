@@ -6,23 +6,49 @@
     box-sizing: border-box;
 }
 :root{
-    --primary-color:#F7F3E3;
-    --text-color: #27161E;
-    /* --text-color-secondary:  */
+    --primary-color:#1c03a7;
+    --secondary-color:#6851e6;
+    --text-color-dark: #27161E;
+    --text-color-light: #e9dbe1;
 }
 body{
     font-family: "Poppins", sans-serif;
-    background-color: var(--primary-color);
+    background-color: #ffffff;
 }
 a{
     text-decoration: none;
 }
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+  }
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  .navcontent{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding: 5px; */
-    gap: 1.5rem;
+    gap: 2rem;
     list-style-type: none;
     min-height: 50px;
     /* position: fixed; */   
@@ -35,13 +61,33 @@ nav ul li a {
     color: var(--text-color); 
     letter-spacing: 1px;/* Ensure links within li also have the color */
 }
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  nav .checkbox{
+    display: none;
+}
+nav input{
+    display: none;
+}
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+
+
 .hero{
     display: flex;
     flex-direction: column;
-    background-color: bisque;
+    /* background-color: bisque; */
     justify-content: center;
     padding: 23px;
     height: fit-content;
+    background-color: #b5b2c5;
     align-items: center;
     text-align: center;
 }
@@ -72,7 +118,7 @@ nav ul li a {
 } */
 
 .hero_btn button{
-    padding: 17px 32px;
+    padding: 12px 32px;
     border-radius: 20px;
     color: var(--text-color);
     border: none;
@@ -80,16 +126,47 @@ nav ul li a {
     cursor: pointer;
     font-size: 16px;
     font-weight: 900;
-    background-color: #584130;
-    color: white;
+    background-color: var(--secondary-color);
+    color:var(--text-color-light);
 }
 .hero_btn button:hover{
-    background-color: #584130;
-    color: bisque;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     
 }
 
+
 @media (max-width: 760px) {
+
+        .navcontent .checkbox {
+            display: block; /* Show the checkbox (menu icon) in mobile view */
+            z-index: 100;
+        }
+        
+        .navcontent .checkbox i {
+            color: var(--text-color-dark); /* Adjust the color for visibility */
+            font-size: 2rem;
+            display: block; /* Ensure the icon is visible */
+            cursor: pointer;
+        }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh-85px);
+        left: -100%;
+        top: 85px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        background-color: var(--secondary-color);
+    }
+    nav #check:checked ~ ul {
+        left:0;
+    }
+    ul li a {
+        font-size: 1.2rem;
+    }
     .hero{
         height: fit-content;
         justify-content: center;
@@ -110,3 +187,5 @@ nav ul li a {
         margin-top: 0px; /* Space above the image */
     }
 }
+
+

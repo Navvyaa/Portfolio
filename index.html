@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
     <nav>
+        <div class="navcontent">
+            <div class="logo"><a href="#">Navya</a></div>
+        <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
         <ul>
-            <li><a href="#Home">Home</a></li>
+        <ul>
+            <li><a href="#">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
+        </div>
+        
     </nav>
     <section>
         <div class="hero">
@@ -24,24 +35,48 @@
                     <img style="width: 400px" src="assets/colorful-illustration-female-programmer-working.png" alt="">
                 </div>
                 <div class="content">
-                    <h1>Hey, I'm Navya Gupta</h1><br>
-                    <p>A B.tech Sophomore with a keen interest in web development and passionate about competetive
+                    <h1>Hey, I'm Navya </h1><br>
+                    <p>Welcome to my Portfolio! I'm a B.tech sophomore with a keen interest in web development and competetive
                         coding.</p>
-                    <div class="hero_btn">
+                    <div class="hero_btn" id="Contact">
                         <a href="mailto:navyagupta171@gmail.com">
                             <button>Contact Me</button>
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
 
-
         </div>
-
+    </section>
+    <section id="Skills">
+        <div class="skillset">
+            <h1>My Skillset</h1>
+            <div class="skill_card">
+                <img src="assets/htmllogo.svg" alt=""><h4>HTML</h4>
+                <p>Proficient in Building Semantic HTML pages</p>
+            </div>
+            <div class="skill_card">
+                <img src="assets/css.svg" alt=""><h4>CSS</h4>
+                <p>Creating Responsive Designs</p>
+            </div>
+            <div class="skill_card">
+                <img src="assets/code.svg" alt=""><h4>Code</h4>
+                <p>Coding in Java and C++</p>
+            </div>
+        </div>
+        <div class="profiles">
+            <p>Checkout my :</p>
+            <ul>
+                <li><a href="https://github.com/Navvyaa" target="_blank"><img src="assets/github.svg" alt=""></a></li>
+            </ul>
+            <li>
+                <a href="https://www.codechef.com/users/navyagupta3" target="_blank"><img src="assets/code.svg" alt=""></a>
+            </li>
 
         </div>
     </section>
+    
 </body>
 
 </html>
