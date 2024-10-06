@@ -6,10 +6,20 @@
     box-sizing: border-box;
 }
 :root{
-    --primary-color: #b5b2c5;
-    --secondary-color:#6851e6;
-    --text-color-dark: #27161E;
-    --text-color-light: #ffffff;
+    --primary-color: #c7c4da;
+    /* --primary-color: #291f2e; */
+    --secondary-color:#3f224b;
+    --color-blue:#d1c412;
+    --text-color-light: #748d92;
+    
+    --btn-color: #685cb9;
+    /* --text-color-dar: */
+    --text-color-very-light: #d3d9d4;
+    /* --primary-color: #212A31;
+    --secondary-color:#3e4852;
+    --color-blue:#129bd1;
+    --text-color-light: #748d92;
+    --text-color-very-light: #d3d9d4; */
 }
 body{
     font-family: "Poppins", sans-serif;
@@ -21,32 +31,40 @@ a{
 
   nav {
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
+    background-color:var(--secondary-color);
   }
   .navcontent{
     margin: auto;
-    padding: 20px;
+    padding: 17px;
     display: flex;
     align-content: center;
     justify-content: center;
   }
-  ul li a:hover {
-    border-top-color: var(--secondary-color);
-    border-bottom-color: var(--secondary-color);
-    color: var(--secondary-color);
+  .navcontent ul li a:hover {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-top-color: var(--color-blue);
+    border-bottom-color: var(--color-blue);
+    color: var(--color-blue);
+    padding: 5px;
   }
-nav ul {
+
+  nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding: 5px; */
     gap: 2rem;
     list-style-type: none;
-    min-height: 30px;
-    /* position: fixed; */   
+    min-height: 25px;
+    color: var(--text-color-very-light);
+    font-weight: bolder;
+    /* position: fixed;    */
+    /* top: 0; */
 }
 nav ul li{
     padding: 5px;
@@ -54,7 +72,7 @@ nav ul li{
 nav ul li a {
     font-weight: 500;
     color: var(--text-color); 
-    letter-spacing: 1px;/* Ensure links within li also have the color */
+    letter-spacing: 1px;
 }
 nav .checkbox i {
     font-size: 2rem;
@@ -82,10 +100,10 @@ nav .checkbox i {
     justify-content: center;
     padding: 23px;
     height: fit-content;
-    background-color: #b5b2c5;
+    background-color: #c7c4da;
     align-items: center;
     text-align: center;
-    width: 100vw
+    width: 100vw;
 }
 .hero_content{
     display: flex;
@@ -135,15 +153,14 @@ nav .checkbox i {
 @media (max-width: 760px) {
 
         .navcontent .checkbox {
-            display: block; /* Show the checkbox (menu icon) in mobile view */
+            display: block; 
             z-index: 100;
         }
         
         .navcontent .checkbox i {
             color: var(--text-color-dark); 
             display: block; 
-            cursor: pointer;
-            
+            cursor: pointer;           
         }
 
     
@@ -249,8 +266,7 @@ nav .checkbox i {
     color: #27161E;
 }
 
-footer .contact #contact{
-    
+.contact{
     text-align: center;
     
 }
