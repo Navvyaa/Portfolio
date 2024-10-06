@@ -23,7 +23,7 @@
 }
 body{
     font-family: "Poppins", sans-serif;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
 }
 a{
     text-decoration: none;
@@ -93,61 +93,67 @@ nav .checkbox i {
 
 
 
-.hero{
+  .hero {
     display: flex;
     flex-direction: column;
-    /* background-color: bisque; */
     justify-content: center;
     padding: 23px;
-    height: fit-content;
-    background-color: #c7c4da;
+    height: calc(80vh-25px); 
+    background-color: var(--primary-color);
     align-items: center;
     text-align: center;
     width: 100vw;
+    box-sizing: border-box;
 }
-.hero_content{
+
+.hero_content {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
 }
-.content{
+.content {
     width: 60%;
-    /* background-color: #27161E; */
     margin: 23px;
-    position: relative;
-    align-content: center;
-    /* flex-wrap: wrap; */
+    text-align: left;
 }
-.hero_content h1{
-    font-size: 44px; 
+
+.hero_content h1 {
+    font-size: 44px;
     margin-bottom: 20px;
+    
 }
-.hero_content p{
+
+.hero_content p {
     font-size: 20px;
     margin-bottom: 20px;
 }
-/* .hero-img{
+.hero_content .hero-img >img {
+    width: 400px;
     position: relative;
-    top: 0;
-} */
-
-.hero_btn button{
+    top: 20px;
+    left: 7px; 
+}
+.hero_btn button {
     padding: 12px 32px;
     border-radius: 20px;
-    color: var(--text-color);
     border: none;
     margin-top: 20px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 900;
     background-color: var(--secondary-color);
-    color:var(--text-color-light);
-}
-.hero_btn button:hover{
-    background-color:#27161E;
     color: var(--text-color-light);
-    
+    transition: background-color 0.3s ease;
 }
+.hero_btn button:hover {
+    background-color: #27161E;
+    color: var(--text-color-light);
+}
+
+
 
 
 @media (max-width: 760px) {
