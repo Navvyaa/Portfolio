@@ -15,19 +15,18 @@
         <nav>
             <div class="navcontent">
                 <label for="check" class="checkbox">
-                    <img src="assets/menu.svg" alt="">
+                    <img src="assets/menu.svg" alt="Menu Icon">
                 </label>
                 <input type="checkbox" name="check" id="check" />
-                <ul>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-
         </nav>
+        
     </header>
     <section>
         <div class="hero">
@@ -40,9 +39,9 @@
                     <p>Welcome to my Portfolio! I'm a B.tech sophomore with a keen interest in web development and
                         competetive
                         coding.</p>
-                    <div class="hero_btn" >
+                    <div class="hero_btn">
                         <a href="mailto:navyagupta171@gmail.com">
-                            <button>Contact Me</button>
+                            <button>Hire Me</button>
                         </a>
 
                     </div>
@@ -56,7 +55,7 @@
             <div class="heading">
                 <h1>My Skillset</h1>
             </div>
-            
+
 
             <br>
             <div class="skill_card">
@@ -76,22 +75,20 @@
                     <span><img src="assets/code2.svg" alt=""><span>C++</span></span>
                     <p>"Started learning C++ for competetive coding."</p>
                 </div>
-                    
-                </div>
+
             </div>
-           
+        </div>
+
     </section>
     <section class="about" id="about">
         <h1>About Me</h1>
-        <p>Hello! I’m Navya Gupta, a 2nd-year B.Tech student currently pursuing Computer Science Engineering at Ajay
-            Kumar Garg Engineering College (AKGEC), Ghaziabad. I’m passionate about coding and have been exploring web
-            development, having learned HTML and CSS. I'm also active on CodeChef. I'm constantly looking to improve my
-            skills and take on new challenges in the tech world. </p>
+        <p> I'm Navya Gupta, a 2nd-year B.Tech student currently pursuing Computer Science Engineering at Ajay
+            Kumar Garg Engineering College (AKGEC), Ghaziabad. I'm passionate about coding and have been exploring web development, having learned HTML and CSS. I'm also active on CodeChef. I'm constantly looking to improve my skills and take on new challenges in the tech world. </p>
         <div class="profiles">
-            <p>Checkout my :</p>
+            <p>Check out my :</p>
             <ul>
                 <li><a href="https://github.com/Navvyaa" target="_blank">
-                    <img src="assets/github.svg" alt="">Github</a></li>
+                        <img src="assets/github.svg" alt="">Github</a></li>
                 <li>
                     <a href="https://www.codechef.com/users/navyagupta3" target="_blank"><img src="assets/code.svg"
                             alt="">CodeChef</a>
@@ -103,15 +100,27 @@
 
         </div>
     </section>
-    <footer >
-        <div class="contact" id="#contact">
-        <h1>Contact</h1>
-        <h3>I’m just a message away! Feel free to reach out whenever you’d like.</h3>
-        <p>Phone :+91 785655347</p>
-        <p>Email : navyagupta171@gmail.com</p>
-        </div>
-        
-    </footer>
+    <footer>
+        <section contact  id="#contact">
+            <div class="contact">
+            <h1>Contact</h1>
+            <h3>If you'd like to reach out, please don't hesitate to use the contact details provided below:</h3>
+            <p>Phone :+91 785655347</p>
+            <p>Email : navyagupta171@gmail.com</p>
+            <span>LinkedIn :<a href="https://www.linkedin.com/in/navya-gupta-8663932a6/">LinkedIn Profile</a></span>
+            <h3>You can also use the form below to message me :</h3>
+            <form action="mailto:navyagupta171@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name :</label>
+                <input type="text" name="name" id="name" required>
+                <label for="emil">Email :</label>
+                <input type="text" name="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+            </div>
+            
+        </footer>
 </body>
 
 </html>

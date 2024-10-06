@@ -9,7 +9,7 @@
     --primary-color: #c7c4da;
     /* --primary-color: #291f2e; */
     --secondary-color:#3f224b;
-    --color-blue:#d1c412;
+    /* --color-blue:#d1c412; */
     --text-color-light: #748d92;
     
     --btn-color: #685cb9;
@@ -52,8 +52,7 @@ a{
     color: var(--color-blue);
     padding: 5px;
   }
-
-  nav ul {
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +66,7 @@ a{
     /* top: 0; */
 }
 nav ul li{
+    
     padding: 5px;
 }
 nav ul li a {
@@ -91,6 +91,18 @@ nav .checkbox i {
     cursor: pointer;
   }
 
+  #check:checked ~ .menu {
+    display: flex; /* Show the menu when the checkbox is checked */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position the menu absolutely */
+    background-color:var(--secondary-color); 
+    top: 50px; 
+    left: 50px;
+    width: 100%; 
+    height: 100vh;;
+    padding: 10px 0; 
+    z-index: 100;
+}
 
 
   .hero {
@@ -123,12 +135,13 @@ nav .checkbox i {
 .hero_content h1 {
     font-size: 44px;
     margin-bottom: 20px;
-    
+    color: var(--secondary-color);
 }
 
 .hero_content p {
     font-size: 20px;
     margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 .hero_content .hero-img >img {
     width: 400px;
@@ -145,15 +158,13 @@ nav .checkbox i {
     font-size: 16px;
     font-weight: 900;
     background-color: var(--secondary-color);
-    color: var(--text-color-light);
+    color: var(--text-color-very-light);
     transition: background-color 0.3s ease;
 }
 .hero_btn button:hover {
     background-color: #27161E;
-    color: var(--text-color-very-light);
+    color: var(--text-color-light);
 }
-
-
 
 
 @media (max-width: 760px) {
@@ -182,33 +193,47 @@ nav .checkbox i {
         background-color: var(--secondary-color);
     }
     nav #check:checked ~ ul {
-        left:0;
+        left: 10px;;
         
     }
     ul li a {
         font-size: 1.2rem;
     }
-    .hero{
-        height: fit-content;
+    .hero {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: center;
-        width: 100%;
+        padding: 23px;
+        height: max(fit-content,70vh); 
+        background-color:var(--primary-color);
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        box-sizing: border-box;
     }
+    
     .hero_content {
         flex-direction: column;
         align-items  : center; 
-        text-align: center; /* Center text on small screens */
+        text-align: center; 
         
     }
     .content{
+        
         justify-items: center;
     }
-    .hero-img {
-        max-width: 80%; 
-        margin-top: 10px; 
+    .hero_content .hero-img >img {
+        width: 300px;
+        position: relative;
+        top: 20px;
+        left: 7px; 
     }
     
 }
+
+
+
+
 #skills {
     text-align: center;
     padding: 50px;
@@ -220,10 +245,6 @@ nav .checkbox i {
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
 .heading h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -277,35 +298,140 @@ nav .checkbox i {
     }
 
     .skill_card1, .skill_card2, .skill_card3, .skill_card4 {
-        width: 100%; 
+        width: 100%;
         height: auto; 
     }
 }
-#about {
-    margin: 50px 0px;
-    text-align: center;
-    font-size: 18px;
+
+
+
+
+.about {
+    background-color: #f9f9f9; 
+    padding: 40px 20px; 
+    text-align: center; 
+}
+.about h1 {
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    color: #333; 
 }
 .about p {
-    padding: 25px;
-    width: 70%;
-    margin: auto;
+    font-size: 18px; 
+    margin-bottom: 20px; 
+    color: #555;
+    line-height: 1.6; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto; 
 }
-.about .profiles ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 23px;
-    list-style: none;
+.profiles {
+    margin-top: 20px;
 }
-.about .profiles ul li a{
-    text-decoration: none;
-    color: #27161E;
+.profiles p {
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    color: #333; 
+}
+.profiles ul {
+    list-style-type: none; 
+    padding: 0;
 }
 
+.profiles li {
+    display: inline-block; 
+    margin: 0 15px;
+}
+
+.profiles a {
+    text-decoration: none; 
+    color: var(--secondary-color); 
+    font-weight: bold;
+    transition: color 0.3s; 
+}
+.profiles a:hover {
+    color: #003366; 
+}
+
+.profiles img {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px; 
+    vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        padding: 20px 10px; 
+    }
+
+    .about h1 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 16px; 
+    }
+
+    .profiles {
+        flex-direction: column;
+    }
+
+    .profiles ul {
+        padding: 0;
+    }
+
+    .profiles li {
+        margin-bottom: 10px;
+    }
+    .profiles img {
+        width: 30px; 
+        height: 30px; 
+        margin-bottom: 10px; 
+}
+}
 .contact{
     text-align: center;
-    
+    padding: 40px 20px;
 }
-
-
+.contact h1{
+    margin-bottom: 20px;
+    font-size: 2.5em
+}
+.contact h3{
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin-top: 10px;   
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+}
+label {
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+input[type="text"], input[type="email"], textarea {
+    padding: 10px; 
+    border: 1px solid var(--text-color-very-light); 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
+    font-size: 16px; 
+    resize: none; 
+}
+input[type="submit"] {
+    background-color:var(--secondary-color);
+    color: var(--text-color-very-light); 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+input[type="submit"]:hover {
+    background-color: #4a54d4; 
+}
